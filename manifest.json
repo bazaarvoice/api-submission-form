@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "Type": "Field",
+            "Id": "title"
+        },
+        {
+            "Type": "Field",
+            "Id": "reviewtext"
+        },
+        {
+            "Type": "Field",
+            "Id": "rating"
+        },
+        {
+            "Type": "Group",
+            "Id": "contextdatavalue"
+        }
+    ]
+}
