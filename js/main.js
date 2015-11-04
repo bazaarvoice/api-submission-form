@@ -304,5 +304,7 @@ function integerInput(field){
         integerHtml += '<div class="star star_group_rating star_live"><a tabindex="' + n + '+" href="#" onclick="return false;" id="star_link_rating_'+ n + '" name="" title="">'+n+'</a></div>';
     }
 
-    return integerHtml;
+
+    var int_snippet = '<div class="star_group"><label for="star_group">Rating</label>'+integerHtml+'</div>';
+    return int_snippet;
 }

@@ -11,7 +11,7 @@
 .selectInput option{
     font-size: 10px;
 }
-.textInput label, .selectInput label, .textInputAreareviewtext label, .booleanInput label {
+.textInput label, .selectInput label, .textInputAreareviewtext label, .booleanInput label , .star_group label{
     width: 100%;
     display: block;
     float: left;

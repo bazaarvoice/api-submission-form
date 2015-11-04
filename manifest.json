@@ -1,6 +1,6 @@
 {
     "data": [
-        {
+         {
             "Type": "Field",
             "Id": "title"
         },
@@ -12,9 +12,10 @@
             "Type": "Field",
             "Id": "rating"
         },
-        {
+               {
             "Type": "Group",
             "Id": "contextdatavalue"
         }
+
     ]
 }
