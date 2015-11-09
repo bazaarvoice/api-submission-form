@@ -31,8 +31,8 @@ DEBUG=dynanic_form npm start
 
 The node server should spin up and display a form similar to the following: 
     
-    ![alt tag](https://cloud.githubusercontent.com/assets/2584258/11048652/ce624324-86fe-11e5-911b-8286b00fe9e3.jpg)
-    
+<img src="https://cloud.githubusercontent.com/assets/2584258/11048652/ce624324-86fe-11e5-911b-8286b00fe9e3.jpg" width="45%"></img>)
+
 
 - Stop the NODE server.
 ```
