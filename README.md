@@ -8,7 +8,7 @@ This tutorial shows you how to use a Conversation API response to dynamically se
 
 Building a static submission form is not an ideal strategy and might not work at all. Fortunately, the Conversations API provides the data you need to build dynamic forms and will always show the correct fields and configurations.
 
-The [Submission Fundamentals](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals) tutorial provides an in-depth examination into the components involved in CGC submission to the Conversations API. This includes the use of the &Action parameter. 
+The [Submission Fundamentals](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals) tutorial provides an in-depth examination into the components involved in CGC submission to the Conversations API. This includes the use of the [&Action](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals#the-action-parameter-and-the-submission-process) parameter. 
 
 ## Example
 
