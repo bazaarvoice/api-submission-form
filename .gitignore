@@ -1,0 +1,10 @@
+# Various OS gunk.
+*.swp
+.DS_Store
+
+# NPM.
+npm-debug.log
+node_modules
+
+# Sublime Text
+*.sublime-*
