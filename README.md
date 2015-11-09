@@ -10,6 +10,8 @@ Building a static submission form is not an ideal strategy and might not work at
 
 The [Submission Fundamentals](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals) tutorial provides an in-depth examination into the components involved in CGC submission to the Conversations API. This includes the use of the [&Action](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals#the-action-parameter-and-the-submission-process) parameter. 
 
+A more in-depth discussion into the how developers can build forms can be found by reading [How to Build a Submission Fomr](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals) and should be considered an accompanying write up to this tutorial. 
+
 ## Example
 
 To try an example:
@@ -26,6 +28,11 @@ git clone https://github.com/bazaarvoice/api-submission-form
 npm install
 DEBUG=dynanic_form npm start
 ```
+
+The node server should spin up and display a form similar to the following: 
+    
+    ![alt tag](https://cloud.githubusercontent.com/assets/2584258/11048652/ce624324-86fe-11e5-911b-8286b00fe9e3.jpg)
+    
 
 - Stop the NODE server.
 ```
