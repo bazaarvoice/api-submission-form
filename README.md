@@ -22,7 +22,7 @@ To try an example:
 git clone https://github.com/bazaarvoice/api-submission-form
 ```
 
-- Run the example:
+- Install the dependencies and run the example from the correct dir:
 
 ```
 npm install
@@ -31,7 +31,7 @@ DEBUG=dynanic_form npm start
 
 The node server should spin up and display a form similar to the following: 
     
-<img src="https://cloud.githubusercontent.com/assets/2584258/11049011/d0419af8-8700-11e5-97af-963148f1792e.jpg" width="45%" style="border:1px solid black"></img>
+<img src="https://cloud.githubusercontent.com/assets/2584258/11049011/d0419af8-8700-11e5-97af-963148f1792e.jpg  " width="45%" style="border:1px solid black"></img>
 
 
 - Stop the NODE server.
@@ -46,7 +46,16 @@ CTRL-C
 DEBUG=dynanic_form npm start
 ```
 
+The order of different HTML inputs should reflect the order in the manifest.json file.
+
+
+##Details
+The manifest.json is used to determine the rendered HTML inputs. The following is a summary of the code:
+- The code find the element in the API response generated from the preview, either a Fields element or a Group element. If a Group is indicated, the code iterates through the fields until the Group is completed.  
+- Determines what input type should be rendered (text input, boolean, integer, select input, etc.).
+- If the type is select input, the options are also rendered.
+- Sets a Label if one is present in the respone. If not looks in the manifest.json to find one.
+- Sets a default value if one is provided in the response.
+
 ##Contributing
 @jwbanning
-
-## Usage
