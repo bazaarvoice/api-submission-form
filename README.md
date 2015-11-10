@@ -36,7 +36,7 @@ The node server should spin up and display a form similar to the following:
 
 - Stop the NODE server.
 ```
-CTRL-C
+CTRL-C from the terminal
 ```
 
 - Modify the manifest.json file by rearranging the JSON nodes.

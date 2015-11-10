@@ -20,8 +20,8 @@ router.get('/', function(req, res, next) {
                 return get_manifest(data);
             })
             .then(function (data) {
-                console.log(data);//You have the HTML here. need to set to the global variable.
-                HTML = data;
+                //console.log(data);//You have the HTML here. 
+                res.render('index', { title: 'dynamic submission form', form_data: data});
             });
     }
     function get_manifest(submit_response){
@@ -84,9 +84,6 @@ router.get('/', function(req, res, next) {
              //handle this error
         }
         return html;
-        // Append to the form
-        //$(html).appendTo( "#formContainer" );
-
     }
     function renderGroup(field, submit_response){
         var beginning = '<div class="groups_container">';
@@ -94,7 +91,7 @@ router.get('/', function(req, res, next) {
         if (submit_response.Data.Groups[id].SubElements){
              groupData = '';
             for(k=0; k<submit_response.Data.Groups[id].SubElements.length; k++){
-                console.log('calling fields render for ' + submit_response.Data.Groups[id].SubElements[k].Id);
+                //console.log('calling fields render for ' + submit_response.Data.Groups[id].SubElements[k].Id);
                 groupData += renderField(submit_response.Data.Groups[id].SubElements[k].Id, submit_response);
                 //get the fields that make up the group. 
                 //need to check to see if they are groups or fields. 
@@ -124,7 +121,6 @@ router.get('/', function(req, res, next) {
         }
         return label;
     }
-
 
     function textInput(field){
         var lab = getLabel(field);
@@ -185,6 +181,9 @@ router.get('/', function(req, res, next) {
             };
         return options;
     }
+    function underpants() {
+        return '<p>THIS IS UNDERPANTS</p>';               
+    }
     function makeRequest(options, type) {               // function to make the request
         var deferred = Q.defer();
 
@@ -213,8 +212,7 @@ router.get('/', function(req, res, next) {
         });
     return deferred.promise;
     }
-    HTML = '<div class="textInputAreareviewtext"><label for="reviewtext">Review Text from Manifest</label><textarea name="textarea" id="reviewtext" rows="10" cols="50">null</textarea></div><div class="textInput title"><label for="title">Title from Manifest</label><input type = "text" id = "title" value = "null" /></div><div class="star_group"><label for="star_group">Rating</label><div class="star star_group_rating star_live"><a tabindex="1+" href="#" onclick="return false;" id="star_link_rating_1" name="" title="">1</a></div><div class="star star_group_rating star_live"><a tabindex="2+" href="#" onclick="return false;" id="star_link_rating_2" name="" title="">2</a></div><div class="star star_group_rating star_live"><a tabindex="3+" href="#" onclick="return false;" id="star_link_rating_3" name="" title="">3</a></div><div class="star star_group_rating star_live"><a tabindex="4+" href="#" onclick="return false;" id="star_link_rating_4" name="" title="">4</a></div><div class="star star_group_rating star_live"><a tabindex="5+" href="#" onclick="return false;" id="star_link_rating_5" name="" title="">5</a></div></div><div class="groups_container"><div class="selectInput"><label for="contextdatavalue_Gender">What is your gender?</label><select name="contextdatavalue_Gender"><option value=""></option><option value="Male">Male</option><option value="Female">Female</option></select></div><div class="selectInput"><label for="contextdatavalue_Age">How old are you?</label><select name="contextdatavalue_Age"><option value=""></option><option value="17orUnder">17 or under</option><option value="18to24">18 to 24</option><option value="25to34">25 to 34</option><option value="35to44">35 to 44</option><option value="45to54">45 to 54</option><option value="55to64">55 to 64</option><option value="65orOver">65 or over</option></select></div><div class="selectInput"><label for="contextdatavalue_LengthOfOwnership">Approximately how long have you owned this product?</label><select name="contextdatavalue_LengthOfOwnership"><option value=""></option><option value="1week">1 week</option><option value="1month">1 month</option><option value="3months">3 months</option><option value="6months">6 months</option><option value="1year">1 year or longer</option></select></div><div class="selectInput"><label for="contextdatavalue_FrequencyOfUse">Approximately how often do you use this product?</label><select name="contextdatavalue_FrequencyOfUse"><option value=""></option><option value="Daily">Daily</option><option value="Weekly">Weekly</option><option value="Monthly">Monthly</option><option value="Yearly">Yearly</option></select></div><div class="selectInput"><label for="contextdatavalue_Expertise">What is your level of expertise with this product?</label><select name="contextdatavalue_Expertise"><option value=""></option><option value="Beginner">Beginner</option><option value="Intermediate">Intermediate</option><option value="Expert">Expert</option></select></div></div>';
-    res.render('index', { title: 'dynamic submission form', form_data: HTML});
 });
+
 
 module.exports = router;
