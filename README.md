@@ -1,6 +1,6 @@
 # API Submission Form
 
-[Developer README](./CONTRIBUTING.md)
+[Developer README](/Contributing.md)
 
 This tutorial shows you how to use a Conversation API response to dynamically set the sequence of HTML inputs on a submission form.
 
@@ -50,6 +50,9 @@ The order of different HTML inputs should reflect the order in the manifest.json
 
 
 ##Details
+A <a href="">Submit Review</a> request is made to the Conversations API. 
+
+
 The manifest.json is used to determine the rendered HTML inputs. The following is a summary of the code:
 - The code find the element in the API response generated from the preview, either a Fields element or a Group element. If a Group is indicated, the code iterates through the fields until the Group is completed.  
 - Determines what input type should be rendered (text input, boolean, integer, select input, etc.).
