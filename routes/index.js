@@ -5,14 +5,15 @@ var Q = require('q');
 var manifest = require('../public/manifest.json');
 var submit_response;
 
-var HTML = '';
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
     get_request();
     
     function get_request(){
+    //The API key is for demo purposes only. Developers should request their own API keys
+    // Please visit https://developer.bazaarvoice.com/apps/register to request API keys
+
         submitURL = "http://stg.api.bazaarvoice.com/data/submitreview.json?ApiVersion=5.4&ProductId=foo&PassKey=kuy3zj9pr3n7i0wxajrzj04xo";    //this is a sample review submit.
         submitOptions = setUpOptions(submitURL);
         makeRequest(submitOptions, 'actionLookUp')
@@ -25,8 +26,8 @@ router.get('/', function(req, res, next) {
             });
     }
     function get_manifest(submit_response){
-        var HTML_1='';
-        for (i=0; i<manifest.data.length; i++){
+        var HTML='';
+        for (i=0; i < manifest.data.length; i++){
             // get the ID and find in the response
             if (manifest.data[i].Type == 'Field')
             {
@@ -36,7 +37,7 @@ router.get('/', function(req, res, next) {
                 if (submit_response.Data.Fields)  //error check to make sure it exists
                 {
                     html = renderField(id, submit_response);
-                    HTML_1+=html;
+                    HTML+=html;
                 }
                 else{
                     console.log('could not find node');
@@ -48,13 +49,13 @@ router.get('/', function(req, res, next) {
                 html = renderGroup(id, submit_response); //call group function
                 // Append to the form
                 //$(html).appendTo( "#formContainer" );
-                HTML_1+=html;
+                HTML+=html;
             }
             else{
                 console.log('not sure of the data type');
             }
         }
-        return HTML_1;
+        return HTML;
     }
 
 
