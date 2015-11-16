@@ -60,7 +60,7 @@ The manifest.json is used to determine the rendered HTML inputs. The following i
 - Sets a Label if one is present in the respone. If not looks in the manifest.json to find one.
 - Sets a default value if one is provided in the response.
 
-##Disclamier
+##Disclaimer
 This code is for educational purposes only and should not be used in production code. 
 
 ##Contributing
