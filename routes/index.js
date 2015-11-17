@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
         //The API key is for demo purposes only. Developers should request their own API keys
         // Please visit https://developer.bazaarvoice.com/apps/register to request API keys
 
-        submitURL = "http://stg.api.bazaarvoice.com/data/submitreview.json?ApiVersion=5.4&ProductId=foo&PassKey=kuy3zj9pr3n7i0wxajrzj04xo"; //this is a sample review submit.
+        var submitURL = "http://stg.api.bazaarvoice.com/data/submitreview.json?ApiVersion=5.4&ProductId=foo&PassKey=kuy3zj9pr3n7i0wxajrzj04xo"; //this is a sample review submit.
         submitOptions = setUpOptions(submitURL);
         makeRequest(submitOptions, 'actionLookUp')
             .then(function(data) {
@@ -29,17 +29,17 @@ router.get('/', function(req, res, next) {
     }
 
     function getManifest(submit_response) {
-        var HTML = '';
+        var htmlFull= '';
         for (i = 0; i < manifest.data.length; i++) {
             // get the ID and find in the response
             if (manifest.data[i].Type == 'Field') {
                 id = manifest.data[i].Id;
-                label = manifest.data[i].Label;
+                var label = manifest.data[i].Label;
 
                 if (submit_response.Data.Fields) //error check to make sure it exists
                 {
                     html = renderField(id, submit_response);
-                    HTML += html;
+                    htmlFull += html;
                 } else {
                     console.log('could not find node');
                 }
@@ -49,12 +49,12 @@ router.get('/', function(req, res, next) {
                 html = renderGroup(id, submit_response); //call group function
                 // Append to the form
                 //$(html).appendTo( "#formContainer" );
-                HTML += html;
+                htmlFull += html;
             } else {
                 console.log('not sure of the data type');
             }
         }
-        return HTML;
+        return htmlFull;
     }
 
 
@@ -138,7 +138,7 @@ router.get('/', function(req, res, next) {
     function selectInput(field) {
         var lab = getLabel(field);
         //loop through the options. 
-        optionsHtml = '';
+        var optionsHtml = '';
         for (j = 0; j < field.Options.length; j++) {
             optionsHtml += '<option value="' + field.Options[j].Value + '">' + field.Options[j].Label + '</option>';
         }
@@ -148,7 +148,7 @@ router.get('/', function(req, res, next) {
 
     function integerInput(field) {
         var lab = getLabel(field);
-        integerHtml = '';
+        var integerHtml = '';
         if (field.Value == null) {
             field.Value = 5;
         }
