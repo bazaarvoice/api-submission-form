@@ -51,7 +51,7 @@ The order of different HTML inputs should reflect the order in the manifest.json
 
 
 ##Details
-A <a href="">Submit Review</a> request is made to the Conversations API. 
+A <a href="https://developer.bazaarvoice.com/docs/read/conversations/reviews/submit">Submit Review</a> request is made to the Conversations API. 
 
 
 The manifest.json is used to determine the rendered HTML inputs. The following is a summary of the code:
