@@ -12,6 +12,7 @@ The [Submission Fundamentals](https://developer.bazaarvoice.com/apis/conversatio
 
 A more in-depth discussion into the how developers can build forms can be found by reading [How to Build a Submission Form](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals) and should be considered an accompanying write up to this tutorial. 
 
+
 ## Example
 
 To try an example:
