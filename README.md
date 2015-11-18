@@ -10,7 +10,7 @@ Building a static submission form is not an ideal strategy and might not work at
 
 The [Submission Fundamentals](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals) tutorial provides an in-depth examination into the components involved in CGC submission to the Conversations API. This includes the use of the [&Action](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals#the-action-parameter-and-the-submission-process) parameter. 
 
-A more in-depth discussion into the how developers can build forms can be found by reading [How to Build a Submission Form](https://developer.bazaarvoice.com/apis/conversations/tutorials/submission_fundamentals) and should be considered an accompanying write up to this tutorial. 
+A more in-depth discussion into the how developers can build forms can be found by reading [How to Build a Submission Form](https://developer.bazaarvoice.com/apis/conversations/tutorials/How_to_Build_a_Submission_Form) and should be considered an accompanying write up to this tutorial. 
 
 
 ## Example
