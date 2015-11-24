@@ -60,15 +60,29 @@ The manifest.json is used to determine the rendered HTML inputs. The following i
 
 The following is aimed at developers who are interested viewing the tutorial built out using [Node.js](https://nodejs.org/en/). To view the tutorial follow the instructions below. 
 
+- Make directory and cd into it:
+```
+mkdir api_submission_form && cd $_
+``` 
+
 - Clone this repo:
 ```
 git clone https://github.com/bazaarvoice/api-submission-form
 ```
 
-- Install the dependencies and run the example from the correct dir:
+- Install the dependencies and run the example from the correct dir (you might have to sudo):
 ```
 npm install
-DEBUG=dynanic_form npm start
+```
+
+- cd into the Node.js directory:
+```
+cd Node.js
+```
+
+- start the node server. Page should be available at http://localhost:3000/
+```
+npm start
 ```
 
 The node server should spin up and display a form similar to the following: 
