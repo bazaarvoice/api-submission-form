@@ -2,13 +2,13 @@
     "data": [
         {
             "Type": "Field",
-            "Id": "reviewtext",
-            "Label": "Review Text from Manifest"
+            "Id": "title",
+            "Label": "Title from Manifest"
         },
         {
             "Type": "Field",
-            "Id": "title",
-            "Label": "Title from Manifest"
+            "Id": "reviewtext",
+            "Label": "Review Text from Manifest"
         },
         {
             "Type": "Field",
