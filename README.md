@@ -2,6 +2,15 @@
 
 [Developer README](/Contributing.md)
 
+
+
+TO DO:
+include the manijest JSON file in the readme.. 
+decouple the lang and the lesson
+
+
+
+
 This tutorial shows you how to use a Conversation API response to dynamically set the sequence of HTML inputs on a submission form.
 
 ## Overview
@@ -12,6 +21,33 @@ The [Submission Fundamentals](https://developer.bazaarvoice.com/apis/conversatio
 A more in-depth discussion into the how developers can build forms can be found by reading [How to Build a Submission Form](https://developer.bazaarvoice.com/apis/conversations/tutorials/How_to_Build_a_Submission_Form) and should be considered an accompanying write up to this tutorial. 
 
 ## Specifics
+
+
+<code>
+{
+    "data": [
+        {
+            "Type": "Field",
+            "Id": "title",
+            "Label": "Title from Manifest"
+        },
+        {
+            "Type": "Field",
+            "Id": "reviewtext",
+            "Label": "Review Text from Manifest"
+        },
+        {
+            "Type": "Field",
+            "Id": "rating",
+            "Label": "Ratings from Manifest"
+        },
+        {
+            "Type": "Group",
+            "Id": "contextdatavalue"
+        }
+    ]
+}
+</code>
 In this tutorial, the [manifest.json](/public/manifest.json) file is used to determine the order of the HTML inputs. As you can see in the [file](/public/manifest.json), the submission form inputs will be presented in the following order: Review Title, Review Text, Rating, Context Data Group. By rearranging the elements in the [manifest.json](/public/manifest.json) file and restating the application, the order of the input elements will honor the changes. 
 
 The tutorial also honors the ["Type"](https://developer.bazaarvoice.com/apis/conversations/tutorials/input_types) key values returned for the various Fields to generate the correct [HTML inputs](https://github.com/bazaarvoice/api-submission-form/blob/master/routes/index.js#L61).
