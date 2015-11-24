@@ -16,7 +16,7 @@ In this tutorial, the [manifest.json](/public/manifest.json) (seen below) file i
 
 The tutorial also honors the ["Type"](https://developer.bazaarvoice.com/apis/conversations/tutorials/input_types) key values returned for the various Fields to generate the correct [HTML inputs](https://github.com/bazaarvoice/api-submission-form/blob/master/routes/index.js#L61).
 
-In this tutorial The [manifest.json](/manifest.json) also controls the [labels](/routes/index.js#L102) for the HTML inputs.
+The [manifest.json](/manifest.json) also controls the [labels](/routes/index.js#L102) for the HTML inputs.
 
 ```javascript
 {
