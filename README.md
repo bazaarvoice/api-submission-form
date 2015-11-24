@@ -40,7 +40,8 @@ DEBUG=dynanic_form npm start
 
 The node server should spin up and display a form similar to the following: 
     
-<img src="https://cloud.githubusercontent.com/assets/2584258/11049011/d0419af8-8700-11e5-97af-963148f1792e.jpg  " width="45%" style="border:1px solid black"></img>
+<img width="45%" alt="screen shot 2015-11-24 at 2 21 47 pm" src="https://cloud.githubusercontent.com/assets/2584258/11379695/48dc6440-92b7-11e5-93b3-d3d62a3011e0.png">
+
 
 
 - Stop the NODE server.
