@@ -12,11 +12,11 @@ Developers should consider the [Submission Fundamentals](https://developer.bazaa
 An even more in-depth discussion into the how to build forms can be found by reading [How to Build a Submission Form](https://developer.bazaarvoice.com/apis/conversations/tutorials/How_to_Build_a_Submission_Form) and should be considered an accompanying write up to this tutorial. 
 
 ## Specifics
-In this tutorial, the [manifest.json](/public/manifest.json) (seen below) file is used to determine the order of the HTML inputs. As you can see in the [file](/public/manifest.json), the submission form inputs will be presented in the following order: Review Title, Review Text, Rating, Context Data Group. By rearranging the elements in the [manifest.json](/public/manifest.json) file and restating the application, the order of the input elements will honor the changes. 
+In this tutorial, the [manifest.json](/public/manifest.json) (seen below) is used to determine the order of the HTML inputs. As you can see in the [file](/public/manifest.json), the submission form inputs will be presented in the following order: Review Title, Review Text, Rating, Context Data Group. By rearranging the elements in the [manifest.json](/public/manifest.json) file and restating the application, the order of the input elements will honor the changes. 
 
 The tutorial also honors the ["Type"](https://developer.bazaarvoice.com/apis/conversations/tutorials/input_types) key values returned for the various Fields to generate the correct [HTML inputs](https://github.com/bazaarvoice/api-submission-form/blob/master/routes/index.js#L61).
 
-The [manifest.json](/manifest.json) also controls the [labels](/routes/index.js#L102) for the HTML inputs.
+In this tutorial The [manifest.json](/manifest.json) also controls the [labels](/routes/index.js#L102) for the HTML inputs.
 
 ```javascript
 {
@@ -60,29 +60,15 @@ The manifest.json is used to determine the rendered HTML inputs. The following i
 
 The following is aimed at developers who are interested viewing the tutorial built out using [Node.js](https://nodejs.org/en/). To view the tutorial follow the instructions below. 
 
-- Make directory and cd into it:
-```
-mkdir api_submission_form && cd $_
-``` 
-
 - Clone this repo:
 ```
 git clone https://github.com/bazaarvoice/api-submission-form
 ```
 
-- Install the dependencies and run the example from the correct dir (you might have to sudo):
+- Install the dependencies and run the example from the correct dir:
 ```
 npm install
-```
-
-- cd into the Node.js directory:
-```
-cd Node.js
-```
-
-- start the node server. Page should be available at http://localhost:3000/
-```
-npm start
+DEBUG=dynanic_form npm start
 ```
 
 The node server should spin up and display a form similar to the following: 
