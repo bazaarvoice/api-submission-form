@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('dynanic_form:server');
+var debug = require('debug')('dynamic_form:server');
 var http = require('http');
 
 /**
