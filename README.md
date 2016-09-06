@@ -12,11 +12,12 @@ Developers should consider the [Submission Fundamentals](https://developer.bazaa
 An even more in-depth discussion into the how to build forms can be found by reading [How to Build a Submission Form](https://developer.bazaarvoice.com/apis/conversations/tutorials/How_to_Build_a_Submission_Form) and should be considered an accompanying write up to this tutorial. 
 
 ## Specifics
-In this tutorial, the [manifest.json](/public/manifest.json) (seen below) is used to determine the order of the HTML inputs. As you can see in the [file](/public/manifest.json), the submission form inputs will be presented in the following order: Review Title, Review Text, Rating, Context Data Group. By rearranging the elements in the [manifest.json](/public/manifest.json) file and restating the application, the order of the input elements will honor the changes. 
+In this tutorial, the [manifest.json](https://github.com/bazaarvoice/api-submission-form/blob/master/Node/public/manifest.json) (seen below) is used to determine the order of the HTML inputs. As you can see in the [file](https://github.com/bazaarvoice/api-submission-form/blob/master/Node/public/manifest.json), the submission form inputs will be presented in the following order: Review Title, Review Text, Rating, Context Data Group. By rearranging the elements in the [manifest.json](/public/manifest.json) file and restating the application, the order of the input elements will honor the changes. 
 
 The tutorial also honors the ["Type"](https://developer.bazaarvoice.com/apis/conversations/tutorials/input_types) key values returned for the various Fields to generate the correct [HTML inputs](https://github.com/bazaarvoice/api-submission-form/blob/master/routes/index.js#L61).
 
-In this tutorial The [manifest.json](/manifest.json) also controls the [labels](/routes/index.js#L102) for the HTML inputs.
+In this tutorial The [manifest.json](
+In this tutorial, the [manifest.json](https://github.com/bazaarvoice/api-submission-form/blob/master/Node/public/manifest.json) also controls the [labels](/routes/index.js#L102) for the HTML inputs.
 
 ```javascript
 {
@@ -68,7 +69,8 @@ git clone https://github.com/bazaarvoice/api-submission-form
 - Install the dependencies and run the example from the correct dir:
 ```
 npm install
-DEBUG=dynanic_form npm start
+change dir to 'Node' folder
+DEBUG=dynamic_form npm start
 ```
 
 The node server should spin up and display a form similar to the following: 
